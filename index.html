@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        
+    </header>
+    
+    <main>
+        <form autocomplete="off" name="form">
+            <h1>SIMPLE CALCULATOR</h1>
+            <div class="question">
+              <input type="text" onkeypress="isInputNumber(event)" placeholder="0" name="userInput" id="userInput">
+            </div>
+            <div class="display">
+                Result: <input name="displayResult" id="displayResult" readonly/>
+            </div>
+
+            <div class="functions">
+                <input type="button" class="btn-submit" name="addb" value="+" onClick="calcNumbers(addb.value)">
+                <input type="button" class="btn-submit" name="subb" value="-" onClick="calcNumbers(subb.value)">
+                <input type="button" class="btn-submit" name="multib" value="*" onClick="calcNumbers(multib.value)">
+                <input type="button" class="btn-submit" name="divb" value="/" onClick="calcNumbers(divb.value)">
+            </div>
+
+            <div class="functions">
+                
+                <input type="button" class="btn-submit" value="x&sup2;" onClick="displayResult.value=Math.pow(userInput.value, 2), display('&sup2;')">
+                <input type="button" class="btn-submit" name="remb" value="%" onClick="percent()">
+                <input type="button" class="btn-submit" value="=" onClick="displayResult.value=eval(userInput.value);">
+                <button class="btn-submit" value="clear-all" onClick="clear-all">AC</button>
+            </div>
+          </form>
+    </main>
+
+    <footer>
+        <div class="footer">
+            Copyright &copy; <span id="getYear"></span>
+        </div>
+    </footer>
+    <!--JS-->
+    <script src="js/main.js"></script>
+</body>
+</html>
